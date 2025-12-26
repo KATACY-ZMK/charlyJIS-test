@@ -19,8 +19,8 @@
 ---
 include:
   - board: xiao_ble
-    shield: charly-test_r
+    shield: charly-t_j_r
   - board: xiao_ble
-    shield: charly-test_l
+    shield: charly-t_j_l
   - board: xiao_ble
     shield: settings_reset

@@ -1,14 +1,14 @@
-if SHIELD_CHARLYTEST_R
+if SHIELD_CHARLY_T_J_R
 
 config ZMK_KEYBOARD_NAME
-    default "charly-testr"
+    default "charlyJIStest"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_CHARLYTEST_L|| SHIELD_CHARLYTEST_R
+if SHIELD_CHARLY_T_J_L|| SHIELD_CHARLY_T_J_R
 
 config ZMK_SPLIT
     default y
@@ -16,7 +16,7 @@ config ZMK_SPLIT
 
 endif
 
-if SHIELD_CHARLYTEST_R
+if SHIELD_CHARLY_T_J_R
 
 # Other settings
 

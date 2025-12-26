@@ -1,10 +1,16 @@
-/* charly-test_l.overlay */
-#include "charly-test.dtsi"
+#include "charlyJIStest.dtsi"
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+
+&xiao_serial { status = "disabled"; };
+
+&default_transform {
+    col-offset = <9>;
+};
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-charlieplex";
 
-    /* D1 = P0.03 */
     interrupt-gpios = <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 
     gpios = 
@@ -18,10 +24,11 @@
         <&xiao_d 0 GPIO_ACTIVE_HIGH>;  // IO7
 };
 
-&left1_encoder {
-   status = "okay";
-};
+&right1_encoder { status = "okay"; };
+&right2_encoder { status = "okay"; };
 
-&left2_encoder {
-   status = "okay";
-};
+&trackball_listener {
+    status = "okay";
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+    };

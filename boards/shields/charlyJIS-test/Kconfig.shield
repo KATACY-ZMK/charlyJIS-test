@@ -1,0 +1,5 @@
+config SHIELD_CHARLY_T_J_R
+    def_bool $(shields_list_contains,charly-t_j_r)
+
+config SHIELD_CHARLY_T_J_L
+    def_bool $(shields_list_contains,charly-t_j_l)
